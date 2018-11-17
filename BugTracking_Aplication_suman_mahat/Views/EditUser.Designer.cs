@@ -39,6 +39,7 @@
             this.txt_fullName = new System.Windows.Forms.TextBox();
             this.lbl_fullName = new System.Windows.Forms.Label();
             this.lbl_editUser = new System.Windows.Forms.Label();
+            this.btn_edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_email
@@ -161,11 +162,24 @@
             this.lbl_editUser.TabIndex = 28;
             this.lbl_editUser.Text = "Edit User";
             // 
+            // btn_edit
+            // 
+            this.btn_edit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_edit.ForeColor = System.Drawing.Color.DarkCyan;
+            this.btn_edit.Location = new System.Drawing.Point(180, 391);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(86, 36);
+            this.btn_edit.TabIndex = 35;
+            this.btn_edit.Text = "Edit User";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
             // EditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 457);
+            this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.combo_role);
             this.Controls.Add(this.lbl_role);
@@ -179,6 +193,7 @@
             this.Controls.Add(this.lbl_editUser);
             this.Name = "EditUser";
             this.Text = "EditUser";
+            this.Load += new System.EventHandler(this.EditUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +212,6 @@
         private System.Windows.Forms.TextBox txt_fullName;
         private System.Windows.Forms.Label lbl_fullName;
         private System.Windows.Forms.Label lbl_editUser;
+        private System.Windows.Forms.Button btn_edit;
     }
 }

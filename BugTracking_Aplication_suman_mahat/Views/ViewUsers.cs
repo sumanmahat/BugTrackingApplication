@@ -24,7 +24,9 @@ namespace BugTracking_Aplication_suman_mahat.Views
         {
 
         }
-
+        /// <summary>
+        /// method to load user data into datatable
+        /// </summary>
         public void LoadAllUser()
         {
             ProfileController pController = new ProfileController();
@@ -46,6 +48,11 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         }
 
+        /// <summary>
+        /// button event to edit user data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_edit_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count != 0)
@@ -66,6 +73,11 @@ namespace BugTracking_Aplication_suman_mahat.Views
             }
         }
 
+        /// <summary>
+        /// button event to delete user
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count != 0)

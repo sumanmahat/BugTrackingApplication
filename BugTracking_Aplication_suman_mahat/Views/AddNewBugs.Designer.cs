@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txt_sourceCode = new System.Windows.Forms.TextBox();
             this.lbl_sourceCode = new System.Windows.Forms.Label();
             this.combo_year = new System.Windows.Forms.ComboBox();
             this.combo_date = new System.Windows.Forms.ComboBox();
@@ -47,28 +46,21 @@
             this.txt_project = new System.Windows.Forms.TextBox();
             this.lbl_project = new System.Windows.Forms.Label();
             this.pan_addBug = new System.Windows.Forms.Panel();
+            this.lbl_path = new System.Windows.Forms.Label();
+            this.btn_open = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_sourceCode = new System.Windows.Forms.RichTextBox();
             this.pan_addBug.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txt_sourceCode
-            // 
-            this.txt_sourceCode.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_sourceCode.ForeColor = System.Drawing.Color.Red;
-            this.txt_sourceCode.Location = new System.Drawing.Point(337, 398);
-            this.txt_sourceCode.Multiline = true;
-            this.txt_sourceCode.Name = "txt_sourceCode";
-            this.txt_sourceCode.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txt_sourceCode.Size = new System.Drawing.Size(387, 117);
-            this.txt_sourceCode.TabIndex = 10;
             // 
             // lbl_sourceCode
             // 
             this.lbl_sourceCode.AutoSize = true;
-            this.lbl_sourceCode.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_sourceCode.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_sourceCode.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sourceCode.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_sourceCode.Location = new System.Drawing.Point(17, 439);
             this.lbl_sourceCode.Name = "lbl_sourceCode";
-            this.lbl_sourceCode.Size = new System.Drawing.Size(165, 39);
+            this.lbl_sourceCode.Size = new System.Drawing.Size(213, 36);
             this.lbl_sourceCode.TabIndex = 35;
             this.lbl_sourceCode.Text = "Source Code";
             // 
@@ -168,11 +160,11 @@
             // lbl_date
             // 
             this.lbl_date.AutoSize = true;
-            this.lbl_date.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_date.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_date.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_date.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_date.Location = new System.Drawing.Point(18, 344);
             this.lbl_date.Name = "lbl_date";
-            this.lbl_date.Size = new System.Drawing.Size(86, 39);
+            this.lbl_date.Size = new System.Drawing.Size(96, 36);
             this.lbl_date.TabIndex = 22;
             this.lbl_date.Text = "Date:";
             // 
@@ -190,7 +182,7 @@
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btn_cancel.ForeColor = System.Drawing.Color.Brown;
             this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancel.Location = new System.Drawing.Point(430, 573);
+            this.btn_cancel.Location = new System.Drawing.Point(426, 648);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(89, 36);
             this.btn_cancel.TabIndex = 12;
@@ -203,7 +195,7 @@
             this.btn_add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.btn_add.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.btn_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_add.Location = new System.Drawing.Point(120, 573);
+            this.btn_add.Location = new System.Drawing.Point(119, 648);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(62, 36);
             this.btn_add.TabIndex = 11;
@@ -224,11 +216,11 @@
             // lbl_codeAuthor
             // 
             this.lbl_codeAuthor.AutoSize = true;
-            this.lbl_codeAuthor.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_codeAuthor.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_codeAuthor.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codeAuthor.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_codeAuthor.Location = new System.Drawing.Point(17, 288);
             this.lbl_codeAuthor.Name = "lbl_codeAuthor";
-            this.lbl_codeAuthor.Size = new System.Drawing.Size(189, 39);
+            this.lbl_codeAuthor.Size = new System.Drawing.Size(228, 36);
             this.lbl_codeAuthor.TabIndex = 20;
             this.lbl_codeAuthor.Text = "Code Author :";
             // 
@@ -244,22 +236,22 @@
             // lbl_lineNo
             // 
             this.lbl_lineNo.AutoSize = true;
-            this.lbl_lineNo.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_lineNo.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_lineNo.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_lineNo.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_lineNo.Location = new System.Drawing.Point(17, 236);
             this.lbl_lineNo.Name = "lbl_lineNo";
-            this.lbl_lineNo.Size = new System.Drawing.Size(196, 39);
+            this.lbl_lineNo.Size = new System.Drawing.Size(231, 36);
             this.lbl_lineNo.TabIndex = 18;
             this.lbl_lineNo.Text = "Line Number :";
             // 
             // lbl_method
             // 
             this.lbl_method.AutoSize = true;
-            this.lbl_method.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_method.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_method.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_method.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_method.Location = new System.Drawing.Point(17, 184);
             this.lbl_method.Name = "lbl_method";
-            this.lbl_method.Size = new System.Drawing.Size(129, 39);
+            this.lbl_method.Size = new System.Drawing.Size(151, 36);
             this.lbl_method.TabIndex = 16;
             this.lbl_method.Text = "Method :";
             // 
@@ -275,11 +267,11 @@
             // lbl_class
             // 
             this.lbl_class.AutoSize = true;
-            this.lbl_class.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_class.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_class.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_class.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_class.Location = new System.Drawing.Point(17, 130);
             this.lbl_class.Name = "lbl_class";
-            this.lbl_class.Size = new System.Drawing.Size(97, 39);
+            this.lbl_class.Size = new System.Drawing.Size(121, 36);
             this.lbl_class.TabIndex = 14;
             this.lbl_class.Text = "Class :";
             // 
@@ -295,11 +287,11 @@
             // lbl_project
             // 
             this.lbl_project.AutoSize = true;
-            this.lbl_project.Font = new System.Drawing.Font("Monotype Corsiva", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_project.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lbl_project.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_project.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_project.Location = new System.Drawing.Point(18, 76);
             this.lbl_project.Name = "lbl_project";
-            this.lbl_project.Size = new System.Drawing.Size(120, 39);
+            this.lbl_project.Size = new System.Drawing.Size(144, 36);
             this.lbl_project.TabIndex = 12;
             this.lbl_project.Text = "Project :";
             // 
@@ -307,6 +299,9 @@
             // 
             this.pan_addBug.BackColor = System.Drawing.Color.Khaki;
             this.pan_addBug.Controls.Add(this.txt_sourceCode);
+            this.pan_addBug.Controls.Add(this.lbl_path);
+            this.pan_addBug.Controls.Add(this.btn_open);
+            this.pan_addBug.Controls.Add(this.label1);
             this.pan_addBug.Controls.Add(this.lbl_sourceCode);
             this.pan_addBug.Controls.Add(this.combo_year);
             this.pan_addBug.Controls.Add(this.combo_date);
@@ -330,12 +325,54 @@
             this.pan_addBug.TabIndex = 3;
             this.pan_addBug.Paint += new System.Windows.Forms.PaintEventHandler(this.pan_addBug_Paint);
             // 
+            // lbl_path
+            // 
+            this.lbl_path.AutoSize = true;
+            this.lbl_path.Location = new System.Drawing.Point(336, 549);
+            this.lbl_path.Name = "lbl_path";
+            this.lbl_path.Size = new System.Drawing.Size(0, 13);
+            this.lbl_path.TabIndex = 39;
+            // 
+            // btn_open
+            // 
+            this.btn_open.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.btn_open.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.btn_open.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_open.Location = new System.Drawing.Point(635, 567);
+            this.btn_open.Name = "btn_open";
+            this.btn_open.Size = new System.Drawing.Size(73, 36);
+            this.btn_open.TabIndex = 38;
+            this.btn_open.Text = "open";
+            this.btn_open.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_open.UseVisualStyleBackColor = true;
+            this.btn_open.Click += new System.EventHandler(this.btn_open_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Location = new System.Drawing.Point(17, 549);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 36);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Code snap";
+            // 
+            // txt_sourceCode
+            // 
+            this.txt_sourceCode.Font = new System.Drawing.Font("Consolas", 15.75F);
+            this.txt_sourceCode.Location = new System.Drawing.Point(337, 399);
+            this.txt_sourceCode.Name = "txt_sourceCode";
+            this.txt_sourceCode.Size = new System.Drawing.Size(292, 133);
+            this.txt_sourceCode.TabIndex = 40;
+            this.txt_sourceCode.Text = "";
+            // 
             // AddNewBugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(806, 605);
+            this.ClientSize = new System.Drawing.Size(1155, 605);
             this.Controls.Add(this.pan_addBug);
             this.Name = "AddNewBugs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -347,8 +384,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txt_sourceCode;
         private System.Windows.Forms.Label lbl_sourceCode;
         private System.Windows.Forms.ComboBox combo_year;
         private System.Windows.Forms.ComboBox combo_date;
@@ -367,5 +402,9 @@
         private System.Windows.Forms.TextBox txt_project;
         private System.Windows.Forms.Label lbl_project;
         private System.Windows.Forms.Panel pan_addBug;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_open;
+        private System.Windows.Forms.Label lbl_path;
+        private System.Windows.Forms.RichTextBox txt_sourceCode;
     }
 }

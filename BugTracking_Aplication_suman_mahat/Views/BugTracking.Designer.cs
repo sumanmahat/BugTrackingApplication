@@ -44,6 +44,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.bugsToolStripMenuItem,
@@ -51,9 +52,10 @@
             this.aboutToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.logoutToolStripMenuItem});
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(611, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(881, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,14 +64,15 @@
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProfileToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // viewProfileToolStripMenuItem
             // 
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.viewProfileToolStripMenuItem.Text = "Profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // bugsToolStripMenuItem
             // 
@@ -78,60 +81,66 @@
             this.vToolStripMenuItem,
             this.viewAllBugsToolStripMenuItem});
             this.bugsToolStripMenuItem.Name = "bugsToolStripMenuItem";
-            this.bugsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.bugsToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.bugsToolStripMenuItem.Text = "Bugs";
             // 
             // addBugToolStripMenuItem
             // 
             this.addBugToolStripMenuItem.Name = "addBugToolStripMenuItem";
-            this.addBugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.addBugToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.addBugToolStripMenuItem.Text = "Add Bug";
+            this.addBugToolStripMenuItem.Click += new System.EventHandler(this.addBugToolStripMenuItem_Click);
             // 
             // vToolStripMenuItem
             // 
             this.vToolStripMenuItem.Name = "vToolStripMenuItem";
-            this.vToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.vToolStripMenuItem.Text = "View Bugs";
+            this.vToolStripMenuItem.Click += new System.EventHandler(this.vToolStripMenuItem_Click);
             // 
             // viewAllBugsToolStripMenuItem
             // 
             this.viewAllBugsToolStripMenuItem.Name = "viewAllBugsToolStripMenuItem";
-            this.viewAllBugsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewAllBugsToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.viewAllBugsToolStripMenuItem.Text = "View All Bugs";
+            this.viewAllBugsToolStripMenuItem.Click += new System.EventHandler(this.viewAllBugsToolStripMenuItem_Click);
             // 
             // versionToolStripMenuItem
             // 
             this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
-            this.versionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.versionToolStripMenuItem.Text = "Version Control";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // BugTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 459);
+            this.ClientSize = new System.Drawing.Size(881, 525);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "BugTracking";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BugTracking";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BugTracking_FormClosing);
             this.Load += new System.EventHandler(this.BugTracking_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

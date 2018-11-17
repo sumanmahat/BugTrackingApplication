@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,11 +29,15 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         }
 
+        /// <summary>
+        /// method to load bugs into DataTable
+        /// </summary>
         public void LoadBugs()
         {
             BugsController bController = new BugsController();
+            //sending data into Datatable
             DataTable dt = bController.LoadBugs(email);
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource = dt;  
             dataGridView1.Columns["bugId"].HeaderText = "BugId";
             dataGridView1.Columns["projectname"].HeaderText = "Project Name" ;
             dataGridView1.Columns["classname"].HeaderText = "Class Name";
@@ -55,6 +60,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.MultiSelect = false;
             dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
 
         }
@@ -62,28 +68,31 @@ namespace BugTracking_Aplication_suman_mahat.Views
         //method to change data
         private void btn_solution_Click(object sender, EventArgs e)
         {
+            MemoryStream mStream;
             if(dataGridView1.SelectedRows.Count != 0)
             {
                 int bugId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                string projectname = dataGridView1.SelectedRows[0].Cells[1].ToString();
-                string classname = dataGridView1.SelectedRows[0].Cells[2].ToString();
-                string method = dataGridView1.SelectedRows[0].Cells[3].ToString();
-                string lineNo = dataGridView1.SelectedRows[0].Cells[4].ToString();
-                string author = dataGridView1.SelectedRows[0].Cells[5].ToString();
-                string year = dataGridView1.SelectedRows[0].Cells[6].ToString();
-                string month = dataGridView1.SelectedRows[0].Cells[7].ToString();
-                string day = dataGridView1.SelectedRows[0].Cells[8].ToString();
-                string sourcecode = dataGridView1.SelectedRows[0].Cells[9].ToString();
-                string status = dataGridView1.SelectedRows[0].Cells[10].ToString();
-                string addedby = dataGridView1.SelectedRows[0].Cells[11].ToString();
-                string solveremail = dataGridView1.SelectedRows[0].Cells[12].ToString();
-                string solveyear = dataGridView1.SelectedRows[0].Cells[13].ToString();
-                string solvemonth = dataGridView1.SelectedRows[0].Cells[14].ToString();
-                string solveday = dataGridView1.SelectedRows[0].Cells[15].ToString();
-                string solvecode = dataGridView1.SelectedRows[0].Cells[16].ToString();
+                string projectname = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                string classname = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                string method = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                string lineNo = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+                byte[] errorsnap = (byte[])dataGridView1.SelectedRows[0].Cells[5].Value;
+                string author = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
+                string year = dataGridView1.SelectedRows[0].Cells[7].Value.ToString();
+                string month = dataGridView1.SelectedRows[0].Cells[8].Value.ToString();
+                string day = dataGridView1.SelectedRows[0].Cells[9].Value.ToString();
+                string sourcecode = dataGridView1.SelectedRows[0].Cells[10].Value.ToString();
+                string status = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
+                string addedby = dataGridView1.SelectedRows[0].Cells[12].Value.ToString();
+                string solveremail = dataGridView1.SelectedRows[0].Cells[13].Value.ToString();
+                string solveyear = dataGridView1.SelectedRows[0].Cells[14].Value.ToString();
+                string solvemonth = dataGridView1.SelectedRows[0].Cells[15].Value.ToString();
+                string solveday = dataGridView1.SelectedRows[0].Cells[16].Value.ToString();
+                string solvecode = dataGridView1.SelectedRows[0].Cells[17].Value.ToString();
+                mStream = new MemoryStream(errorsnap);
 
                 BugTracking tracking = new BugTracking();
-                tracking.EditBugForm(email, bugId, projectname, classname, method, lineNo, author, year, month, day, sourcecode, status, addedby, solveremail, solveyear, solvemonth, solveday, solvecode);
+                tracking.EditBugForm(email, bugId, projectname, classname, method, lineNo, mStream,author, year, month, day, sourcecode, status, addedby, solveremail, solveyear, solvemonth, solveday, solvecode);
                 dataGridView1.Refresh();
                 LoadBugs();
             }
@@ -102,7 +111,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
                 if(result == DialogResult.Yes)
                 {
                     int bugId = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                    string addedby = dataGridView1.SelectedRows[0].Cells[11].Value.ToString();
+                    string addedby = dataGridView1.SelectedRows[0].Cells[13].Value.ToString();
 
                     Bugs bugs = new Bugs();
                     bugs.BugId = bugId;
@@ -125,6 +134,11 @@ namespace BugTracking_Aplication_suman_mahat.Views
             {
                 MessageBox.Show("Please select a row"); ;
             }
+        }
+
+        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
