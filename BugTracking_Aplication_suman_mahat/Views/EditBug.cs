@@ -13,7 +13,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
         //declearing variables
         private int bugId;
         private string role;
-        public EditBug(string currentemail, int bugId, string projectname, string classname, string method, string lineNo, MemoryStream mStream,string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
+        public EditBug(string currentemail, int bugId, string projectname, string classname, string method, string lineNo,string endline, MemoryStream mStream,string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
         {
             InitializeComponent();
             this.bugId = bugId;
@@ -36,6 +36,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
             txt_class.Text = classname;
             txt_method.Text = method;
             txt_lineNo.Text = lineNo;
+            txt_endlinenub.Text = endline;
             txt_codeAuthor.Text = author;
             combo_year.Text = year;
             combo_month.Text = month;
@@ -68,6 +69,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
             string classname = txt_class.Text;
             string method = txt_method.Text;
             string lineNo = txt_lineNo.Text;
+            string endline = txt_endlinenub.Text;
             string sourcecode = txt_solutionCode.Text;
           //  string status = combo_status.Text;
             string solveremail = txt_solver.Text;
@@ -84,6 +86,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
                     Classname= classname,
                     Method= method,
                     Lineno= lineNo,
+                    Endline= endline,
                     Sourcecode= sourcecode,
                 //    Status= status,
                     Solver= solveremail,

@@ -29,6 +29,7 @@ namespace BugTracking_Aplication_suman_mahat
         {
             this.email = email;
             this.userId = userId;
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
         }
 
@@ -65,9 +66,9 @@ namespace BugTracking_Aplication_suman_mahat
         }
 
         //event on editbugs
-        public void EditBugForm(string currentemail, int bugId, string projectname, string classname, string method, string lineNo, MemoryStream mStream,string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
+        public void EditBugForm(string currentemail, int bugId, string projectname, string classname, string method, string lineNo,string endline, MemoryStream mStream,string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
         {
-            EditBug edit = new EditBug(currentemail,bugId,projectname,classname,method,lineNo,mStream,author,year,month,day,sourcecode,status,addedby,solveremail,solveyear,solvemonth,solveday,solvecode);
+            EditBug edit = new EditBug(currentemail,bugId,projectname,classname,method,lineNo,endline,mStream,author,year,month,day,sourcecode,status,addedby,solveremail,solveyear,solvemonth,solveday,solvecode);
             edit.ShowDialog();
         }
 

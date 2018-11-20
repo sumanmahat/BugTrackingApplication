@@ -23,6 +23,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
         {
             this.email = email;
             this.userId = userId;
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
         }
 

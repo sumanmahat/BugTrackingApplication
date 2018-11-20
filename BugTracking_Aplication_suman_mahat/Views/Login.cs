@@ -98,6 +98,16 @@ namespace BugTracking_Aplication_suman_mahat
         {
 
         }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
     }
 }       
                

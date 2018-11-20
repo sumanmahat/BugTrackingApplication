@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BugTracking_Aplication_suman_mahat.Controller;
+using BugTracking_Aplication_suman_mahat.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         //variable
         private string email;
+        private int userId;
 
         //constructor
         public AdminPanelForm()
@@ -25,6 +28,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
         public AdminPanelForm(string email)
         {
             this.email = email;
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
         }
 
@@ -78,9 +82,9 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
 
         //event to edit bugs
-        public void EditBugFroms(string currentemail, int bugId, string projectname, string classname, string method, string lineNo,MemoryStream mStream, string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
+        public void EditBugFroms(string currentemail, int bugId, string projectname, string classname, string method, string lineNo,string endline,MemoryStream mStream, string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
         {
-            EditBug edit = new EditBug(currentemail,bugId,projectname,classname,method,lineNo,mStream,author,year,month,day,sourcecode,status,addedby,solveremail,solveyear,solvemonth,solveday,solvecode);
+            EditBug edit = new EditBug(currentemail,bugId,projectname,classname,method,lineNo,endline,mStream,author,year,month,day,sourcecode,status,addedby,solveremail,solveyear,solvemonth,solveday,solvecode);
             edit.ShowDialog();
         }
 
@@ -125,7 +129,16 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            UserProfile profile = new UserProfile();
+            profile.UserId1 = userId;
+            ProfileController pController = new ProfileController();
+            pController.GetUserData(profile);
+            string fullname = pController.fullname;
+            string email = pController.email;
+            string contact = pController.contact;
+            string status = pController.status;
+            ViewUserProfile uprofile = new ViewUserProfile(fullname, email, contact, status);
+            uprofile.ShowDialog();
         }
     }
 }
