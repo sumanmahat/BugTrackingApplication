@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat
 {
     class Connection
     {
-        public static SqlConnection con = null;
-        public SqlCommand cmd;
-        public SqlDataAdapter adpater;
-        public string pkk;
+        public static MySqlConnection con = null;
+       // public string pkk;
+               
 
 
-
-        public static  SqlConnection getConn()
+        public static  MySqlConnection getConn()
         {
             if (con == null)
             {
@@ -29,15 +28,13 @@ namespace BugTracking_Aplication_suman_mahat
         {
             try
             {
-                string sqlconnection = "Data Source=.;Initial Catalog=BugTracking_Suman;Integrated Security=True";
-                con = new SqlConnection(sqlconnection);
-               
+                string sqlconnectionstring = "datasource=localhost;username=root;password=;database=bugtrackin_suman;SSLmode=none";
+                con = new MySqlConnection(sqlconnectionstring);
 
-               
             }
-            catch (SqlException )
+            catch (MySqlException ex)
             {
-                
+                MessageBox.Show("error.."+ex.Message);
             }
             
         }
