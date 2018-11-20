@@ -92,6 +92,7 @@
             this.Controls.Add(this.btn_solution);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewBugs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewBugs";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

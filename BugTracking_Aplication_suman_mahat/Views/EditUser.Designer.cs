@@ -192,6 +192,7 @@
             this.Controls.Add(this.lbl_fullName);
             this.Controls.Add(this.lbl_editUser);
             this.Name = "EditUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditUser";
             this.Load += new System.EventHandler(this.EditUser_Load);
             this.ResumeLayout(false);

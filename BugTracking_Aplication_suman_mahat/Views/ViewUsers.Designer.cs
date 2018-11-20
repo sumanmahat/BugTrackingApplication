@@ -76,6 +76,7 @@
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ViewUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewUsers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

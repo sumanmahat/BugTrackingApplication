@@ -60,6 +60,9 @@
             this.pictureBox_bug = new System.Windows.Forms.PictureBox();
             this.txt_sourceCode = new System.Windows.Forms.RichTextBox();
             this.txt_solutionCode = new System.Windows.Forms.RichTextBox();
+            this.lbl_endline = new System.Windows.Forms.Label();
+            this.txt_endlinenub = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_bug)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +71,7 @@
             this.combo_year.Enabled = false;
             this.combo_year.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combo_year.Font = new System.Drawing.Font("Century", 18F);
-            this.combo_year.ForeColor = System.Drawing.Color.Blue;
+            this.combo_year.ForeColor = System.Drawing.Color.Black;
             this.combo_year.FormattingEnabled = true;
             this.combo_year.Items.AddRange(new object[] {
             "2018",
@@ -84,7 +87,7 @@
             "2028",
             "2029",
             "2030"});
-            this.combo_year.Location = new System.Drawing.Point(330, 240);
+            this.combo_year.Location = new System.Drawing.Point(330, 289);
             this.combo_year.Name = "combo_year";
             this.combo_year.Size = new System.Drawing.Size(86, 36);
             this.combo_year.TabIndex = 52;
@@ -94,7 +97,7 @@
             this.combo_date.Enabled = false;
             this.combo_date.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combo_date.Font = new System.Drawing.Font("Century", 18F);
-            this.combo_date.ForeColor = System.Drawing.Color.Blue;
+            this.combo_date.ForeColor = System.Drawing.Color.Black;
             this.combo_date.FormattingEnabled = true;
             this.combo_date.Items.AddRange(new object[] {
             "1",
@@ -129,7 +132,7 @@
             "30",
             "31",
             "32"});
-            this.combo_date.Location = new System.Drawing.Point(550, 240);
+            this.combo_date.Location = new System.Drawing.Point(550, 289);
             this.combo_date.Name = "combo_date";
             this.combo_date.Size = new System.Drawing.Size(86, 36);
             this.combo_date.TabIndex = 54;
@@ -139,7 +142,7 @@
             this.combo_month.Enabled = false;
             this.combo_month.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combo_month.Font = new System.Drawing.Font("Century", 18F);
-            this.combo_month.ForeColor = System.Drawing.Color.Blue;
+            this.combo_month.ForeColor = System.Drawing.Color.Black;
             this.combo_month.FormattingEnabled = true;
             this.combo_month.Items.AddRange(new object[] {
             "JAN",
@@ -154,7 +157,7 @@
             "OCT",
             "NOV",
             "DEC"});
-            this.combo_month.Location = new System.Drawing.Point(444, 240);
+            this.combo_month.Location = new System.Drawing.Point(444, 289);
             this.combo_month.Name = "combo_month";
             this.combo_month.Size = new System.Drawing.Size(86, 36);
             this.combo_month.TabIndex = 53;
@@ -163,8 +166,8 @@
             // 
             this.txt_addedEmail.Enabled = false;
             this.txt_addedEmail.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_addedEmail.ForeColor = System.Drawing.Color.Blue;
-            this.txt_addedEmail.Location = new System.Drawing.Point(330, 459);
+            this.txt_addedEmail.ForeColor = System.Drawing.Color.Black;
+            this.txt_addedEmail.Location = new System.Drawing.Point(330, 508);
             this.txt_addedEmail.Name = "txt_addedEmail";
             this.txt_addedEmail.Size = new System.Drawing.Size(387, 36);
             this.txt_addedEmail.TabIndex = 57;
@@ -174,7 +177,7 @@
             this.lbl_addedEmail.AutoSize = true;
             this.lbl_addedEmail.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_addedEmail.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_addedEmail.Location = new System.Drawing.Point(11, 456);
+            this.lbl_addedEmail.Location = new System.Drawing.Point(11, 505);
             this.lbl_addedEmail.Name = "lbl_addedEmail";
             this.lbl_addedEmail.Size = new System.Drawing.Size(185, 36);
             this.lbl_addedEmail.TabIndex = 66;
@@ -189,7 +192,7 @@
             this.combo_status.Items.AddRange(new object[] {
             "Active",
             "Fixed"});
-            this.combo_status.Location = new System.Drawing.Point(330, 414);
+            this.combo_status.Location = new System.Drawing.Point(330, 463);
             this.combo_status.Name = "combo_status";
             this.combo_status.Size = new System.Drawing.Size(386, 36);
             this.combo_status.TabIndex = 56;
@@ -199,7 +202,7 @@
             this.lbl_status.AutoSize = true;
             this.lbl_status.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_status.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_status.Location = new System.Drawing.Point(11, 407);
+            this.lbl_status.Location = new System.Drawing.Point(11, 456);
             this.lbl_status.Name = "lbl_status";
             this.lbl_status.Size = new System.Drawing.Size(133, 36);
             this.lbl_status.TabIndex = 65;
@@ -210,7 +213,7 @@
             this.lbl_sourceCode.AutoSize = true;
             this.lbl_sourceCode.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sourceCode.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_sourceCode.Location = new System.Drawing.Point(12, 305);
+            this.lbl_sourceCode.Location = new System.Drawing.Point(12, 354);
             this.lbl_sourceCode.Name = "lbl_sourceCode";
             this.lbl_sourceCode.Size = new System.Drawing.Size(242, 36);
             this.lbl_sourceCode.TabIndex = 64;
@@ -221,7 +224,7 @@
             this.lbl_date.AutoSize = true;
             this.lbl_date.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_date.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_date.Location = new System.Drawing.Point(12, 239);
+            this.lbl_date.Location = new System.Drawing.Point(12, 288);
             this.lbl_date.Name = "lbl_date";
             this.lbl_date.Size = new System.Drawing.Size(105, 36);
             this.lbl_date.TabIndex = 63;
@@ -230,7 +233,7 @@
             // txt_method
             // 
             this.txt_method.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_method.ForeColor = System.Drawing.Color.Red;
+            this.txt_method.ForeColor = System.Drawing.Color.Black;
             this.txt_method.Location = new System.Drawing.Point(331, 114);
             this.txt_method.Name = "txt_method";
             this.txt_method.ReadOnly = true;
@@ -242,8 +245,8 @@
             this.txt_codeAuthor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_codeAuthor.Enabled = false;
             this.txt_codeAuthor.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_codeAuthor.ForeColor = System.Drawing.Color.Blue;
-            this.txt_codeAuthor.Location = new System.Drawing.Point(331, 198);
+            this.txt_codeAuthor.ForeColor = System.Drawing.Color.Black;
+            this.txt_codeAuthor.Location = new System.Drawing.Point(331, 247);
             this.txt_codeAuthor.Name = "txt_codeAuthor";
             this.txt_codeAuthor.ReadOnly = true;
             this.txt_codeAuthor.Size = new System.Drawing.Size(387, 36);
@@ -254,7 +257,7 @@
             this.lbl_codeAuthor.AutoSize = true;
             this.lbl_codeAuthor.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_codeAuthor.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_codeAuthor.Location = new System.Drawing.Point(12, 195);
+            this.lbl_codeAuthor.Location = new System.Drawing.Point(12, 244);
             this.lbl_codeAuthor.Name = "lbl_codeAuthor";
             this.lbl_codeAuthor.Size = new System.Drawing.Size(228, 36);
             this.lbl_codeAuthor.TabIndex = 62;
@@ -263,7 +266,7 @@
             // txt_lineNo
             // 
             this.txt_lineNo.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_lineNo.ForeColor = System.Drawing.Color.Red;
+            this.txt_lineNo.ForeColor = System.Drawing.Color.Black;
             this.txt_lineNo.Location = new System.Drawing.Point(331, 156);
             this.txt_lineNo.Name = "txt_lineNo";
             this.txt_lineNo.ReadOnly = true;
@@ -277,9 +280,9 @@
             this.lbl_lineNo.ForeColor = System.Drawing.Color.DarkCyan;
             this.lbl_lineNo.Location = new System.Drawing.Point(12, 153);
             this.lbl_lineNo.Name = "lbl_lineNo";
-            this.lbl_lineNo.Size = new System.Drawing.Size(231, 36);
+            this.lbl_lineNo.Size = new System.Drawing.Size(304, 36);
             this.lbl_lineNo.TabIndex = 61;
-            this.lbl_lineNo.Text = "Line Number :";
+            this.lbl_lineNo.Text = "StartLine Number :";
             // 
             // lbl_method
             // 
@@ -295,7 +298,7 @@
             // txt_class
             // 
             this.txt_class.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_class.ForeColor = System.Drawing.Color.Red;
+            this.txt_class.ForeColor = System.Drawing.Color.Black;
             this.txt_class.Location = new System.Drawing.Point(331, 72);
             this.txt_class.Name = "txt_class";
             this.txt_class.ReadOnly = true;
@@ -316,7 +319,7 @@
             // txt_project
             // 
             this.txt_project.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_project.ForeColor = System.Drawing.Color.Blue;
+            this.txt_project.ForeColor = System.Drawing.Color.Black;
             this.txt_project.Location = new System.Drawing.Point(331, 30);
             this.txt_project.Name = "txt_project";
             this.txt_project.ReadOnly = true;
@@ -350,7 +353,7 @@
             // 
             this.combo_fixYear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combo_fixYear.Font = new System.Drawing.Font("Century", 18F);
-            this.combo_fixYear.ForeColor = System.Drawing.Color.Blue;
+            this.combo_fixYear.ForeColor = System.Drawing.Color.Black;
             this.combo_fixYear.FormattingEnabled = true;
             this.combo_fixYear.Items.AddRange(new object[] {
             "2018",
@@ -366,7 +369,7 @@
             "2028",
             "2029",
             "2030"});
-            this.combo_fixYear.Location = new System.Drawing.Point(330, 554);
+            this.combo_fixYear.Location = new System.Drawing.Point(330, 603);
             this.combo_fixYear.Name = "combo_fixYear";
             this.combo_fixYear.Size = new System.Drawing.Size(86, 36);
             this.combo_fixYear.TabIndex = 68;
@@ -375,7 +378,7 @@
             // 
             this.combo_fixMonth.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combo_fixMonth.Font = new System.Drawing.Font("Century", 18F);
-            this.combo_fixMonth.ForeColor = System.Drawing.Color.Blue;
+            this.combo_fixMonth.ForeColor = System.Drawing.Color.Black;
             this.combo_fixMonth.FormattingEnabled = true;
             this.combo_fixMonth.Items.AddRange(new object[] {
             "JAN",
@@ -390,7 +393,7 @@
             "OCT",
             "NOV",
             "DEC"});
-            this.combo_fixMonth.Location = new System.Drawing.Point(444, 554);
+            this.combo_fixMonth.Location = new System.Drawing.Point(444, 603);
             this.combo_fixMonth.Name = "combo_fixMonth";
             this.combo_fixMonth.Size = new System.Drawing.Size(86, 36);
             this.combo_fixMonth.TabIndex = 69;
@@ -400,7 +403,7 @@
             this.lbl_fixDate.AutoSize = true;
             this.lbl_fixDate.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fixDate.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_fixDate.Location = new System.Drawing.Point(11, 551);
+            this.lbl_fixDate.Location = new System.Drawing.Point(11, 600);
             this.lbl_fixDate.Name = "lbl_fixDate";
             this.lbl_fixDate.Size = new System.Drawing.Size(199, 36);
             this.lbl_fixDate.TabIndex = 73;
@@ -410,8 +413,8 @@
             // 
             this.txt_solver.Enabled = false;
             this.txt_solver.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_solver.ForeColor = System.Drawing.Color.Blue;
-            this.txt_solver.Location = new System.Drawing.Point(330, 510);
+            this.txt_solver.ForeColor = System.Drawing.Color.Black;
+            this.txt_solver.Location = new System.Drawing.Point(330, 559);
             this.txt_solver.Name = "txt_solver";
             this.txt_solver.Size = new System.Drawing.Size(387, 36);
             this.txt_solver.TabIndex = 67;
@@ -421,7 +424,7 @@
             this.lbl_fixerEmail.AutoSize = true;
             this.lbl_fixerEmail.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fixerEmail.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_fixerEmail.Location = new System.Drawing.Point(11, 507);
+            this.lbl_fixerEmail.Location = new System.Drawing.Point(11, 556);
             this.lbl_fixerEmail.Name = "lbl_fixerEmail";
             this.lbl_fixerEmail.Size = new System.Drawing.Size(206, 36);
             this.lbl_fixerEmail.TabIndex = 72;
@@ -469,7 +472,7 @@
             // 
             this.combo_fixDate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.combo_fixDate.Font = new System.Drawing.Font("Century", 18F);
-            this.combo_fixDate.ForeColor = System.Drawing.Color.Blue;
+            this.combo_fixDate.ForeColor = System.Drawing.Color.Black;
             this.combo_fixDate.FormattingEnabled = true;
             this.combo_fixDate.Items.AddRange(new object[] {
             "1",
@@ -504,7 +507,7 @@
             "30",
             "31",
             "32"});
-            this.combo_fixDate.Location = new System.Drawing.Point(550, 551);
+            this.combo_fixDate.Location = new System.Drawing.Point(550, 600);
             this.combo_fixDate.Name = "combo_fixDate";
             this.combo_fixDate.Size = new System.Drawing.Size(86, 36);
             this.combo_fixDate.TabIndex = 80;
@@ -514,7 +517,7 @@
             this.pictureBox_bug.BackColor = System.Drawing.Color.White;
             this.pictureBox_bug.Location = new System.Drawing.Point(735, 72);
             this.pictureBox_bug.Name = "pictureBox_bug";
-            this.pictureBox_bug.Size = new System.Drawing.Size(367, 321);
+            this.pictureBox_bug.Size = new System.Drawing.Size(396, 321);
             this.pictureBox_bug.TabIndex = 81;
             this.pictureBox_bug.TabStop = false;
             this.pictureBox_bug.Click += new System.EventHandler(this.pictureBox_bug_Click);
@@ -522,7 +525,7 @@
             // txt_sourceCode
             // 
             this.txt_sourceCode.Font = new System.Drawing.Font("Consolas", 15.75F);
-            this.txt_sourceCode.Location = new System.Drawing.Point(329, 282);
+            this.txt_sourceCode.Location = new System.Drawing.Point(329, 331);
             this.txt_sourceCode.Name = "txt_sourceCode";
             this.txt_sourceCode.ReadOnly = true;
             this.txt_sourceCode.Size = new System.Drawing.Size(387, 126);
@@ -540,12 +543,43 @@
             this.txt_solutionCode.Text = "";
             this.txt_solutionCode.TextChanged += new System.EventHandler(this.txt_solutionCode_TextChanged_1);
             // 
+            // lbl_endline
+            // 
+            this.lbl_endline.AutoSize = true;
+            this.lbl_endline.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_endline.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lbl_endline.Location = new System.Drawing.Point(12, 198);
+            this.lbl_endline.Name = "lbl_endline";
+            this.lbl_endline.Size = new System.Drawing.Size(292, 36);
+            this.lbl_endline.TabIndex = 84;
+            this.lbl_endline.Text = "EndLine Number :";
+            // 
+            // txt_endlinenub
+            // 
+            this.txt_endlinenub.Font = new System.Drawing.Font("Century", 18F);
+            this.txt_endlinenub.ForeColor = System.Drawing.Color.Red;
+            this.txt_endlinenub.Location = new System.Drawing.Point(329, 198);
+            this.txt_endlinenub.Name = "txt_endlinenub";
+            this.txt_endlinenub.ReadOnly = true;
+            this.txt_endlinenub.Size = new System.Drawing.Size(387, 36);
+            this.txt_endlinenub.TabIndex = 85;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 89);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1182, 668);
+            this.panel1.TabIndex = 86;
+            // 
             // EditBug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1166, 629);
+            this.Controls.Add(this.txt_endlinenub);
+            this.Controls.Add(this.lbl_endline);
             this.Controls.Add(this.txt_solutionCode);
             this.Controls.Add(this.txt_sourceCode);
             this.Controls.Add(this.pictureBox_bug);
@@ -578,6 +612,7 @@
             this.Controls.Add(this.lbl_class);
             this.Controls.Add(this.txt_project);
             this.Controls.Add(this.lbl_project);
+            this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EditBug";
@@ -624,5 +659,8 @@
         private System.Windows.Forms.PictureBox pictureBox_bug;
         private System.Windows.Forms.RichTextBox txt_sourceCode;
         private System.Windows.Forms.RichTextBox txt_solutionCode;
+        private System.Windows.Forms.Label lbl_endline;
+        private System.Windows.Forms.TextBox txt_endlinenub;
+        private System.Windows.Forms.Panel panel1;
     }
 }

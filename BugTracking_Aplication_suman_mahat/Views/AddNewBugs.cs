@@ -37,7 +37,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
             string className = txt_class.Text;
             string method = txt_method.Text;
             string lineNo = txt_lineNo.Text;
-       
+            string endline = txt_endlinenub.Text;
             string codeAuthor = txt_codeAuthor.Text;
             string year = combo_year.Text;
             string month = combo_month.Text;
@@ -54,6 +54,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
                     Classname = className,
                     Method = method,
                     Lineno = lineNo,
+                    Endline=endline,
                     Author = codeAuthor,
                     Year = year,
                     Month = month,
@@ -72,6 +73,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
                     txt_class.Text = "";
                     txt_codeAuthor.Text = "";
                     txt_lineNo.Text = "";
+                    txt_endlinenub.Text = "";
                     txt_method.Text = "";
                     txt_sourceCode.Text = "";
                     combo_date.Text = "";
