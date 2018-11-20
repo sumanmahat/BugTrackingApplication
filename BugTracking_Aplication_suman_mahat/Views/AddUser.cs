@@ -86,8 +86,11 @@ namespace BugTracking_Aplication_suman_mahat.Views
         
         }
 
-
-        //key down events fortext box (enter to go in next text area)
+        /// <summary>
+        /// key down events fortext box (enter to go in next text area)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddUser_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)

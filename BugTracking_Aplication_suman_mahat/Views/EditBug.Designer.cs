@@ -538,7 +538,7 @@
             this.txt_solutionCode.Font = new System.Drawing.Font("Consolas", 15.75F);
             this.txt_solutionCode.Location = new System.Drawing.Point(744, 463);
             this.txt_solutionCode.Name = "txt_solutionCode";
-            this.txt_solutionCode.Size = new System.Drawing.Size(387, 133);
+            this.txt_solutionCode.Size = new System.Drawing.Size(387, 222);
             this.txt_solutionCode.TabIndex = 83;
             this.txt_solutionCode.Text = "";
             this.txt_solutionCode.TextChanged += new System.EventHandler(this.txt_solutionCode_TextChanged_1);

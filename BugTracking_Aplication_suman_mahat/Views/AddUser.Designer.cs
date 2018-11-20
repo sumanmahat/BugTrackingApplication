@@ -47,7 +47,7 @@
             // txt_confirmPassword
             // 
             this.txt_confirmPassword.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_confirmPassword.ForeColor = System.Drawing.Color.Blue;
+            this.txt_confirmPassword.ForeColor = System.Drawing.Color.Black;
             this.txt_confirmPassword.Location = new System.Drawing.Point(316, 209);
             this.txt_confirmPassword.Name = "txt_confirmPassword";
             this.txt_confirmPassword.Size = new System.Drawing.Size(292, 36);
@@ -69,7 +69,7 @@
             // txt_password
             // 
             this.txt_password.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_password.ForeColor = System.Drawing.Color.Blue;
+            this.txt_password.ForeColor = System.Drawing.Color.Black;
             this.txt_password.Location = new System.Drawing.Point(316, 159);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(292, 36);
@@ -97,7 +97,7 @@
             this.combo_status.Items.AddRange(new object[] {
             "Developer",
             "Tester"});
-            this.combo_status.Location = new System.Drawing.Point(316, 370);
+            this.combo_status.Location = new System.Drawing.Point(316, 332);
             this.combo_status.Name = "combo_status";
             this.combo_status.Size = new System.Drawing.Size(292, 36);
             this.combo_status.TabIndex = 28;
@@ -108,7 +108,7 @@
             this.lbl_role.AutoSize = true;
             this.lbl_role.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_role.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_role.Location = new System.Drawing.Point(27, 375);
+            this.lbl_role.Location = new System.Drawing.Point(27, 337);
             this.lbl_role.Name = "lbl_role";
             this.lbl_role.Size = new System.Drawing.Size(88, 33);
             this.lbl_role.TabIndex = 32;
@@ -117,7 +117,7 @@
             // txt_email
             // 
             this.txt_email.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_email.ForeColor = System.Drawing.Color.Blue;
+            this.txt_email.ForeColor = System.Drawing.Color.Black;
             this.txt_email.Location = new System.Drawing.Point(316, 109);
             this.txt_email.Name = "txt_email";
             this.txt_email.Size = new System.Drawing.Size(292, 36);
@@ -138,8 +138,8 @@
             // txt_contact
             // 
             this.txt_contact.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_contact.ForeColor = System.Drawing.Color.Blue;
-            this.txt_contact.Location = new System.Drawing.Point(316, 310);
+            this.txt_contact.ForeColor = System.Drawing.Color.Black;
+            this.txt_contact.Location = new System.Drawing.Point(316, 272);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(292, 36);
             this.txt_contact.TabIndex = 26;
@@ -149,7 +149,7 @@
             this.lbl_contact.AutoSize = true;
             this.lbl_contact.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_contact.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_contact.Location = new System.Drawing.Point(27, 315);
+            this.lbl_contact.Location = new System.Drawing.Point(27, 277);
             this.lbl_contact.Name = "lbl_contact";
             this.lbl_contact.Size = new System.Drawing.Size(208, 33);
             this.lbl_contact.TabIndex = 30;
@@ -158,7 +158,7 @@
             // txt_name
             // 
             this.txt_name.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_name.ForeColor = System.Drawing.Color.Blue;
+            this.txt_name.ForeColor = System.Drawing.Color.Black;
             this.txt_name.Location = new System.Drawing.Point(316, 55);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(292, 36);
@@ -189,11 +189,12 @@
             // 
             // button2
             // 
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Location = new System.Drawing.Point(316, 438);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 38);
             this.button2.TabIndex = 36;
-            this.button2.Text = "button2";
+            this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // AddUser

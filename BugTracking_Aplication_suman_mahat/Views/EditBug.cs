@@ -62,7 +62,12 @@ namespace BugTracking_Aplication_suman_mahat.Views
         }
 
 
-        //button event to update edit bugs
+        //
+        /// <summary>
+        /// button event to update edit bugs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_update_Click(object sender, EventArgs e)
         {
             string projectname = txt_project.Text;
@@ -71,7 +76,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
             string lineNo = txt_lineNo.Text;
             string endline = txt_endlinenub.Text;
             string sourcecode = txt_solutionCode.Text;
-          //  string status = combo_status.Text;
+            string status = combo_status.Text;
             string solveremail = txt_solver.Text;
             string solveyear = combo_fixYear.Text;
             string solvemonth = combo_fixMonth.Text;
@@ -88,7 +93,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
                     Lineno= lineNo,
                     Endline= endline,
                     Sourcecode= sourcecode,
-                //    Status= status,
+                    Status= status,
                     Solver= solveremail,
                     Solveyear= solveyear,
                     Solvemonth= solvemonth,
