@@ -12,15 +12,14 @@ namespace BugTracking_Aplication_suman_mahat.Controller
 {
     class ProfileController
     {
-        //
+        
         /// <summary>
         /// required variables for profile controller
         /// </summary>
         private MySqlConnection conn = null;
         private MySqlCommand cmd;
         public string fullname, email, contact, status;
-      //  private object txt_email;
-      //  public string pkk;
+      
 
         public ProfileController()
         {
