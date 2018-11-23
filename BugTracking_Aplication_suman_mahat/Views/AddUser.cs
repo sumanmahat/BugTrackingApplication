@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class AddUser : Form
+    public partial class AddUser : MaterialSkin.Controls.MaterialForm
     {
         public AddUser()
         {
@@ -86,11 +86,8 @@ namespace BugTracking_Aplication_suman_mahat.Views
         
         }
 
-        /// <summary>
-        /// key down events fortext box (enter to go in next text area)
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+        //key down events fortext box (enter to go in next text area)
         private void AddUser_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)
@@ -170,7 +167,51 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         private void AddUser_Load(object sender, EventArgs e)
         {
+        }
+        private bool Validation()
+        {
+            bool result = false;
+            if (string.IsNullOrEmpty(txt_name.Text))
+            {
+                errorProvider2.Clear();
+                errorProvider2.SetError(txt_name, "Provide Full Name");
+            }
+            else if (string.IsNullOrEmpty(txt_email.Text))
+            {
+                errorProvider2.Clear();
+                errorProvider2.SetError(txt_email, "Provide Email");
+            }
+            else if (string.IsNullOrEmpty(txt_password.Text))
+            {
+                errorProvider2.Clear();
+                errorProvider2.SetError(txt_password, "Provide Password");
+            }
+            else if (string.IsNullOrEmpty(txt_contact.Text))
+            {
+                errorProvider2.Clear();
+                errorProvider2.SetError(txt_email, "Provide Contact");
+            }
+            else if (string.IsNullOrEmpty(combo_status.Text))
+            {
+                errorProvider2.Clear();
+                errorProvider2.SetError(combo_status, "Provide status");
+            }
+            else
+            {
+                errorProvider2.Clear();
+                result = true;
+            }
+            return result;
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txt_name.Clear();
+            txt_email.Clear();
+            txt_password.Clear();
+            txt_confirmPassword.Clear();
+            txt_contact.Clear();
+            combo_status.SelectedIndex=-1;
         }
     }
 }

@@ -40,8 +40,12 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.viewGitBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuToolStripMenuItem
@@ -85,21 +89,25 @@
             // viewBugsToolStripMenuItem
             // 
             this.viewBugsToolStripMenuItem.Name = "viewBugsToolStripMenuItem";
-            this.viewBugsToolStripMenuItem.Size = new System.Drawing.Size(184, 28);
-            this.viewBugsToolStripMenuItem.Text = "View Bugs";
+            this.viewBugsToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
+            this.viewBugsToolStripMenuItem.Text = "Search Bugs";
             this.viewBugsToolStripMenuItem.Click += new System.EventHandler(this.viewBugsToolStripMenuItem_Click);
             // 
             // versionControlToolStripMenuItem
             // 
+            this.versionControlToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewGitBrowserToolStripMenuItem});
             this.versionControlToolStripMenuItem.Name = "versionControlToolStripMenuItem";
             this.versionControlToolStripMenuItem.Size = new System.Drawing.Size(177, 28);
             this.versionControlToolStripMenuItem.Text = "Version Control";
+            this.versionControlToolStripMenuItem.Click += new System.EventHandler(this.versionControlToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(83, 28);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(176, 28);
+            this.aboutToolStripMenuItem.Text = "SendMeassage";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
@@ -121,30 +129,58 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(735, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(881, 34);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(119, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(322, 162);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(389, 342);
+            this.pictureBox1.Size = new System.Drawing.Size(449, 388);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(317, 53);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(454, 78);
+            this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(71, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(322, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "BugTrackingApplication";
+            // 
+            // viewGitBrowserToolStripMenuItem
+            // 
+            this.viewGitBrowserToolStripMenuItem.Name = "viewGitBrowserToolStripMenuItem";
+            this.viewGitBrowserToolStripMenuItem.Size = new System.Drawing.Size(242, 28);
+            this.viewGitBrowserToolStripMenuItem.Text = "ViewGit Browser";
+            this.viewGitBrowserToolStripMenuItem.Click += new System.EventHandler(this.viewGitBrowserToolStripMenuItem_Click);
             // 
             // AdminPanelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 506);
+            this.ClientSize = new System.Drawing.Size(881, 525);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
             this.Name = "AdminPanelForm";
             this.Text = "AdminPanelForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminPanelForm_FormClosing);
@@ -152,6 +188,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,5 +208,8 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem viewGitBrowserToolStripMenuItem;
     }
 }

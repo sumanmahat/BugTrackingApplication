@@ -32,14 +32,12 @@
             this.combo_role = new System.Windows.Forms.ComboBox();
             this.lbl_role = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
-            this.txt_contact = new System.Windows.Forms.TextBox();
-            this.lbl_contact = new System.Windows.Forms.Label();
-            this.txt_address = new System.Windows.Forms.TextBox();
-            this.lbl_address = new System.Windows.Forms.Label();
             this.txt_fullName = new System.Windows.Forms.TextBox();
             this.lbl_fullName = new System.Windows.Forms.Label();
-            this.lbl_editUser = new System.Windows.Forms.Label();
             this.btn_edit = new System.Windows.Forms.Button();
+            this.txt_contact = new System.Windows.Forms.TextBox();
+            this.lbl_contact = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_email
@@ -64,7 +62,7 @@
             "Developer",
             "Tester",
             "Admin"});
-            this.combo_role.Location = new System.Drawing.Point(348, 320);
+            this.combo_role.Location = new System.Drawing.Point(348, 279);
             this.combo_role.Name = "combo_role";
             this.combo_role.Size = new System.Drawing.Size(292, 36);
             this.combo_role.TabIndex = 27;
@@ -74,7 +72,7 @@
             this.lbl_role.AutoSize = true;
             this.lbl_role.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_role.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_role.Location = new System.Drawing.Point(28, 310);
+            this.lbl_role.Location = new System.Drawing.Point(28, 269);
             this.lbl_role.Name = "lbl_role";
             this.lbl_role.Size = new System.Drawing.Size(90, 37);
             this.lbl_role.TabIndex = 33;
@@ -91,46 +89,6 @@
             this.lbl_email.TabIndex = 32;
             this.lbl_email.Text = "Email :";
             // 
-            // txt_contact
-            // 
-            this.txt_contact.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_contact.ForeColor = System.Drawing.Color.Blue;
-            this.txt_contact.Location = new System.Drawing.Point(348, 268);
-            this.txt_contact.Name = "txt_contact";
-            this.txt_contact.Size = new System.Drawing.Size(292, 36);
-            this.txt_contact.TabIndex = 26;
-            // 
-            // lbl_contact
-            // 
-            this.lbl_contact.AutoSize = true;
-            this.lbl_contact.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_contact.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_contact.Location = new System.Drawing.Point(28, 259);
-            this.lbl_contact.Name = "lbl_contact";
-            this.lbl_contact.Size = new System.Drawing.Size(238, 37);
-            this.lbl_contact.TabIndex = 31;
-            this.lbl_contact.Text = "Contact Number :";
-            // 
-            // txt_address
-            // 
-            this.txt_address.Font = new System.Drawing.Font("Century", 18F);
-            this.txt_address.ForeColor = System.Drawing.Color.Blue;
-            this.txt_address.Location = new System.Drawing.Point(348, 217);
-            this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(292, 36);
-            this.txt_address.TabIndex = 25;
-            // 
-            // lbl_address
-            // 
-            this.lbl_address.AutoSize = true;
-            this.lbl_address.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_address.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_address.Location = new System.Drawing.Point(28, 208);
-            this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(139, 37);
-            this.lbl_address.TabIndex = 30;
-            this.lbl_address.Text = "Address :";
-            // 
             // txt_fullName
             // 
             this.txt_fullName.Font = new System.Drawing.Font("Century", 18F);
@@ -139,6 +97,7 @@
             this.txt_fullName.Name = "txt_fullName";
             this.txt_fullName.Size = new System.Drawing.Size(292, 36);
             this.txt_fullName.TabIndex = 24;
+            this.txt_fullName.TextChanged += new System.EventHandler(this.txt_fullName_TextChanged);
             // 
             // lbl_fullName
             // 
@@ -150,17 +109,6 @@
             this.lbl_fullName.Size = new System.Drawing.Size(158, 37);
             this.lbl_fullName.TabIndex = 29;
             this.lbl_fullName.Text = "Full Name :";
-            // 
-            // lbl_editUser
-            // 
-            this.lbl_editUser.AutoSize = true;
-            this.lbl_editUser.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lbl_editUser.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_editUser.Location = new System.Drawing.Point(271, 41);
-            this.lbl_editUser.Name = "lbl_editUser";
-            this.lbl_editUser.Size = new System.Drawing.Size(160, 45);
-            this.lbl_editUser.TabIndex = 28;
-            this.lbl_editUser.Text = "Edit User";
             // 
             // btn_edit
             // 
@@ -174,11 +122,44 @@
             this.btn_edit.UseVisualStyleBackColor = true;
             this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
+            // txt_contact
+            // 
+            this.txt_contact.Font = new System.Drawing.Font("Century", 18F);
+            this.txt_contact.ForeColor = System.Drawing.Color.Blue;
+            this.txt_contact.Location = new System.Drawing.Point(348, 227);
+            this.txt_contact.Name = "txt_contact";
+            this.txt_contact.Size = new System.Drawing.Size(292, 36);
+            this.txt_contact.TabIndex = 26;
+            // 
+            // lbl_contact
+            // 
+            this.lbl_contact.AutoSize = true;
+            this.lbl_contact.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_contact.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lbl_contact.Location = new System.Drawing.Point(28, 218);
+            this.lbl_contact.Name = "lbl_contact";
+            this.lbl_contact.Size = new System.Drawing.Size(238, 37);
+            this.lbl_contact.TabIndex = 31;
+            this.lbl_contact.Text = "Contact Number :";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.button1.Location = new System.Drawing.Point(348, 391);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 36);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // EditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(675, 457);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.combo_role);
@@ -186,11 +167,8 @@
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.txt_contact);
             this.Controls.Add(this.lbl_contact);
-            this.Controls.Add(this.txt_address);
-            this.Controls.Add(this.lbl_address);
             this.Controls.Add(this.txt_fullName);
             this.Controls.Add(this.lbl_fullName);
-            this.Controls.Add(this.lbl_editUser);
             this.Name = "EditUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditUser";
@@ -206,13 +184,11 @@
         private System.Windows.Forms.ComboBox combo_role;
         private System.Windows.Forms.Label lbl_role;
         private System.Windows.Forms.Label lbl_email;
-        private System.Windows.Forms.TextBox txt_contact;
-        private System.Windows.Forms.Label lbl_contact;
-        private System.Windows.Forms.TextBox txt_address;
-        private System.Windows.Forms.Label lbl_address;
         private System.Windows.Forms.TextBox txt_fullName;
         private System.Windows.Forms.Label lbl_fullName;
-        private System.Windows.Forms.Label lbl_editUser;
         private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.TextBox txt_contact;
+        private System.Windows.Forms.Label lbl_contact;
+        private System.Windows.Forms.Button button1;
     }
 }

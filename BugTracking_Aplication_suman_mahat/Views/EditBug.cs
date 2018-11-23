@@ -13,7 +13,10 @@ namespace BugTracking_Aplication_suman_mahat.Views
         //declearing variables
         private int bugId;
         private string role;
-        public EditBug(string currentemail, int bugId, string projectname, string classname, string method, string lineNo,string endline, MemoryStream mStream,string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
+        Boolean testerFlag;
+     
+
+        public EditBug(string currentemail, int bugId, string projectname, string classname, string method, string lineNo, string endline, MemoryStream mStream, string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
         {
             InitializeComponent();
             this.bugId = bugId;
@@ -23,13 +26,12 @@ namespace BugTracking_Aplication_suman_mahat.Views
                 txt_project.ReadOnly = true;
                 txt_class.ReadOnly = true;
                 txt_method.ReadOnly = true;
-                txt_solutionCode.ReadOnly = true;
-                btn_update.Visible = false;
-                btn_cancel.Visible = false;
+                // txt_solutionCode.ReadOnly = true;
+                //  btn_update.Visible = false;
+                //  btn_cancel.Visible = false;
 
             }
-           
-            
+
             pictureBox_bug.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox_bug.Image = Image.FromStream(mStream);
             txt_project.Text = projectname;
@@ -58,16 +60,20 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         private void EditBug_Load(object sender, EventArgs e)
         {
-
+            if (testerFlag==true)
+            {
+                btn_update.Hide();
+                btn_cancel.Hide();
+            }
+            else
+            {
+                btn_update.Show();
+                btn_cancel.Show();
+            }
         }
 
 
-        //
-        /// <summary>
-        /// button event to update edit bugs
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        //button event to update edit bugs
         private void btn_update_Click(object sender, EventArgs e)
         {
             string projectname = txt_project.Text;
@@ -76,7 +82,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
             string lineNo = txt_lineNo.Text;
             string endline = txt_endlinenub.Text;
             string sourcecode = txt_solutionCode.Text;
-            string status = combo_status.Text;
+          //  string status = combo_status.Text;
             string solveremail = txt_solver.Text;
             string solveyear = combo_fixYear.Text;
             string solvemonth = combo_fixMonth.Text;
@@ -93,7 +99,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
                     Lineno= lineNo,
                     Endline= endline,
                     Sourcecode= sourcecode,
-                    Status= status,
+                //    Status= status,
                     Solver= solveremail,
                     Solveyear= solveyear,
                     Solvemonth= solvemonth,

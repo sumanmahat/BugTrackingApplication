@@ -10,14 +10,16 @@ using System.Windows.Forms;
 using BugTracking_Aplication_suman_mahat.Model;
 using BugTracking_Aplication_suman_mahat.Controller;
 using BugTracking_Aplication_suman_mahat.Views;
+using MaterialSkin;
 
 namespace BugTracking_Aplication_suman_mahat
 {
-    public partial class Login : Form
+    public partial class Login : MaterialSkin.Controls.MaterialForm
     {
         public Login()
         {
             InitializeComponent();
+        
         }
 
         /// <summary>
@@ -49,7 +51,7 @@ namespace BugTracking_Aplication_suman_mahat
                         if (status == "Admin")
                         {
                             this.Hide();
-                            AdminPanelForm admin = new AdminPanelForm(email);
+                            AdminPanelForm admin = new AdminPanelForm(email, status);
                             admin.ShowDialog();
                             this.Close();
 
@@ -64,7 +66,7 @@ namespace BugTracking_Aplication_suman_mahat
                         else
                         {
                             this.Hide();
-                            TesterPanel tp = new TesterPanel(email, userId);
+                            TesterPanel tp = new TesterPanel(email, userId, true);
                             tp.ShowDialog();
                             this.Close();
                         }
@@ -96,7 +98,7 @@ namespace BugTracking_Aplication_suman_mahat
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -107,6 +109,11 @@ namespace BugTracking_Aplication_suman_mahat
         private void btn_clear_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }       

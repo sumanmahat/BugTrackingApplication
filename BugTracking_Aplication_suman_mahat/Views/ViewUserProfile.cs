@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class ViewUserProfile : Form
+    public partial class ViewUserProfile : MaterialSkin.Controls.MaterialForm
     {
         public ViewUserProfile(string fullname, string email, string contact, string status)
         {
@@ -27,7 +27,13 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void btn_close_Click(object sender, EventArgs e)
         {
             Dispose();
         }

@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class SearchBug : Form
+    public partial class SearchBug : MaterialSkin.Controls.MaterialForm
     {
         private string email;
         public SearchBug()
@@ -113,7 +113,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
                     dataGridView1.Refresh();
                     LoadAllBugs();
                 }
-                else
+                else 
                 {
                     BugTracking panel = new BugTracking();
                     panel.BugDetailForm(email, bugId, projectname, classname, method, lineNo, endline, mStream, author, year, month, day, sourcecode, status, addedby, solveremail, solveyear, solvemonth, solveday, solvecode);

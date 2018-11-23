@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class AddNewBugs : Form
+    public partial class AddNewBugs : MaterialSkin.Controls.MaterialForm
     {
         //declearing required variables
         private string email;
@@ -177,6 +177,16 @@ namespace BugTracking_Aplication_suman_mahat.Views
             txt_sourceCode.SelectionColor = originalColor;
 
             txt_project.Focus();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddNewBugs_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

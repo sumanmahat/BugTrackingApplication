@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class ViewBugs : Form
+    public partial class ViewBugs : MaterialSkin.Controls.MaterialForm
     {
 
         private string email;

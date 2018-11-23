@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txt_role = new System.Windows.Forms.TextBox();
             this.txt_contact = new System.Windows.Forms.TextBox();
             this.txt_email = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.lbl_fullName = new System.Windows.Forms.Label();
             this.btn_close = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_role
@@ -45,7 +48,7 @@
             this.txt_role.Enabled = false;
             this.txt_role.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_role.ForeColor = System.Drawing.Color.Blue;
-            this.txt_role.Location = new System.Drawing.Point(312, 242);
+            this.txt_role.Location = new System.Drawing.Point(312, 286);
             this.txt_role.Name = "txt_role";
             this.txt_role.ReadOnly = true;
             this.txt_role.Size = new System.Drawing.Size(362, 32);
@@ -56,7 +59,7 @@
             this.txt_contact.Enabled = false;
             this.txt_contact.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_contact.ForeColor = System.Drawing.Color.Blue;
-            this.txt_contact.Location = new System.Drawing.Point(312, 182);
+            this.txt_contact.Location = new System.Drawing.Point(312, 226);
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.ReadOnly = true;
             this.txt_contact.Size = new System.Drawing.Size(362, 32);
@@ -67,7 +70,7 @@
             this.txt_email.Enabled = false;
             this.txt_email.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_email.ForeColor = System.Drawing.Color.Blue;
-            this.txt_email.Location = new System.Drawing.Point(312, 118);
+            this.txt_email.Location = new System.Drawing.Point(312, 162);
             this.txt_email.Name = "txt_email";
             this.txt_email.ReadOnly = true;
             this.txt_email.Size = new System.Drawing.Size(362, 32);
@@ -78,7 +81,7 @@
             this.txt_fullName.Enabled = false;
             this.txt_fullName.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_fullName.ForeColor = System.Drawing.Color.Blue;
-            this.txt_fullName.Location = new System.Drawing.Point(312, 64);
+            this.txt_fullName.Location = new System.Drawing.Point(312, 108);
             this.txt_fullName.Name = "txt_fullName";
             this.txt_fullName.ReadOnly = true;
             this.txt_fullName.Size = new System.Drawing.Size(362, 32);
@@ -89,7 +92,7 @@
             this.lbl_role.AutoSize = true;
             this.lbl_role.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_role.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_role.Location = new System.Drawing.Point(23, 235);
+            this.lbl_role.Location = new System.Drawing.Point(23, 279);
             this.lbl_role.Name = "lbl_role";
             this.lbl_role.Size = new System.Drawing.Size(94, 36);
             this.lbl_role.TabIndex = 34;
@@ -100,7 +103,7 @@
             this.lbl_email.AutoSize = true;
             this.lbl_email.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_email.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_email.Location = new System.Drawing.Point(23, 111);
+            this.lbl_email.Location = new System.Drawing.Point(23, 155);
             this.lbl_email.Name = "lbl_email";
             this.lbl_email.Size = new System.Drawing.Size(109, 36);
             this.lbl_email.TabIndex = 33;
@@ -111,7 +114,7 @@
             this.lbl_contact.AutoSize = true;
             this.lbl_contact.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_contact.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_contact.Location = new System.Drawing.Point(23, 175);
+            this.lbl_contact.Location = new System.Drawing.Point(23, 219);
             this.lbl_contact.Name = "lbl_contact";
             this.lbl_contact.Size = new System.Drawing.Size(274, 36);
             this.lbl_contact.TabIndex = 32;
@@ -122,7 +125,7 @@
             this.lbl_fullName.AutoSize = true;
             this.lbl_fullName.Font = new System.Drawing.Font("Arial", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fullName.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbl_fullName.Location = new System.Drawing.Point(23, 57);
+            this.lbl_fullName.Location = new System.Drawing.Point(23, 101);
             this.lbl_fullName.Name = "lbl_fullName";
             this.lbl_fullName.Size = new System.Drawing.Size(177, 36);
             this.lbl_fullName.TabIndex = 30;
@@ -130,16 +133,17 @@
             // 
             // btn_close
             // 
-            this.btn_close.Location = new System.Drawing.Point(312, 365);
+            this.btn_close.Location = new System.Drawing.Point(312, 409);
             this.btn_close.Name = "btn_close";
             this.btn_close.Size = new System.Drawing.Size(75, 33);
             this.btn_close.TabIndex = 40;
             this.btn_close.Text = "Close";
             this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 365);
+            this.button1.Location = new System.Drawing.Point(125, 409);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 41;
@@ -147,11 +151,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // ViewUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 423);
+            this.ClientSize = new System.Drawing.Size(690, 482);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_close);
             this.Controls.Add(this.txt_role);
@@ -166,6 +174,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyProfile";
             this.Load += new System.EventHandler(this.ViewUserProfile_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +192,6 @@
         private System.Windows.Forms.Label lbl_fullName;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

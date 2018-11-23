@@ -18,9 +18,19 @@ namespace BugTracking_Aplication_suman_mahat.Views
         //variable 
         private string email;
         private int userId;
+        public Boolean testerFlag;
 
         public TesterPanel(string email,int userId)
         {
+            this.email = email;
+            this.userId = userId;
+            this.WindowState = FormWindowState.Maximized;
+            InitializeComponent();
+        }
+
+        public TesterPanel(string email, int userId, Boolean testerFlag)
+        {
+            this.testerFlag = testerFlag;
             this.email = email;
             this.userId = userId;
             this.WindowState = FormWindowState.Maximized;
@@ -41,7 +51,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         private void viewBugsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AllBugs all = new AllBugs(email);
+            SearchBug all = new SearchBug();
             all.ShowDialog();
         }
 

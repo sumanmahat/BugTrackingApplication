@@ -37,7 +37,7 @@
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(179, 26);
+            this.txt_search.Location = new System.Drawing.Point(156, 79);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(220, 20);
             this.txt_search.TabIndex = 0;
@@ -46,7 +46,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(40, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(618, 293);
@@ -57,7 +57,7 @@
             // 
             this.btn_solution.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_solution.ForeColor = System.Drawing.Color.Black;
-            this.btn_solution.Location = new System.Drawing.Point(40, 412);
+            this.btn_solution.Location = new System.Drawing.Point(40, 431);
             this.btn_solution.Name = "btn_solution";
             this.btn_solution.Size = new System.Drawing.Size(217, 36);
             this.btn_solution.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             this.Search.AutoSize = true;
             this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search.Location = new System.Drawing.Point(68, 26);
+            this.Search.Location = new System.Drawing.Point(37, 79);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(95, 16);
             this.Search.TabIndex = 3;

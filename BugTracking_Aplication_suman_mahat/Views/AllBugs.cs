@@ -12,10 +12,11 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class AllBugs : Form
+    public partial class AllBugs : MaterialSkin.Controls.MaterialForm
     {
         //variable declear
         private string email;
+        public Boolean testerFlag;
         public AllBugs(string email)
         {
             this.email = email;
@@ -97,9 +98,10 @@ namespace BugTracking_Aplication_suman_mahat.Views
                 if(role == "admin@admin.com")
                 {
                     AdminPanelForm admin = new AdminPanelForm();
-                    admin.EditBugFroms(email, bugId, projectname, classname, method, lineNo,endline, mStream,author, year, month, day, sourcecode, status, addedby, solveremail, solveyear, solvemonth, solveday, solvecode);
+                    admin.BugDetailForm(email, bugId, projectname, classname, method, lineNo,endline, mStream,author, year, month, day, sourcecode, status, addedby, solveremail, solveyear, solvemonth, solveday, solvecode);
                     dataGridView1.Refresh();
                     LoadAllBugs();
+                    btn_solution.Visible = false;
                 }
                 else
                 {
@@ -119,6 +121,21 @@ namespace BugTracking_Aplication_suman_mahat.Views
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             Dispose();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void AllBugs_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

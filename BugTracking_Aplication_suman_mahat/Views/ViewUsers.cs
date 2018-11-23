@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class ViewUsers : Form
+    public partial class ViewUsers : MaterialSkin.Controls.MaterialForm
     {
         public ViewUsers()
         {
@@ -109,6 +109,10 @@ namespace BugTracking_Aplication_suman_mahat.Views
                 MessageBox.Show("Please select a row..");
             }
         }
-    
+
+        private void ViewUsers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

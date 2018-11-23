@@ -17,7 +17,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
     {
 
         //variable
-        private string email;
+        private string email, status;
         private int userId;
 
         //constructor
@@ -25,7 +25,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
         {
 
         }
-        public AdminPanelForm(string email)
+        public AdminPanelForm(string email, String status)
         {
             this.email = email;
             this.WindowState = FormWindowState.Maximized;
@@ -76,14 +76,21 @@ namespace BugTracking_Aplication_suman_mahat.Views
         //event to view Bugs
         private void viewBugsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AllBugs bugs = new AllBugs(email);
-            bugs.ShowDialog();
+            SearchBug sb = new SearchBug();
+            sb.ShowDialog();
+        }
+
+        public void BugDetailForm(string currentemail, int bugId, string projectname, string classname, string method, string lineNo, string endline, MemoryStream mStream, string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
+        {
+            ViewBugDetails show = new ViewBugDetails(currentemail, bugId, projectname, classname, method, lineNo, endline, mStream, author, year, month, day, sourcecode, status, addedby, solveremail, solveyear, solvemonth, solveday, solvecode);
+            show.ShowDialog();
         }
 
 
         //event to edit bugs
         public void EditBugFroms(string currentemail, int bugId, string projectname, string classname, string method, string lineNo,string endline,MemoryStream mStream, string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
         {
+
             EditBug edit = new EditBug(currentemail,bugId,projectname,classname,method,lineNo,endline,mStream,author,year,month,day,sourcecode,status,addedby,solveremail,solveyear,solvemonth,solveday,solvecode);
             edit.ShowDialog();
         }
@@ -139,6 +146,28 @@ namespace BugTracking_Aplication_suman_mahat.Views
             string status = pController.status;
             ViewUserProfile uprofile = new ViewUserProfile(fullname, email, contact, status);
             uprofile.ShowDialog();
+        }
+
+        private void viewAllBugsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void viewGitBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/sumanmahat/BugTrackingApplication";
+            System.Diagnostics.Process.Start(url);
+        }
+
+        private void versionControlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Notification nof = new Notification();
+            nof.ShowDialog();
         }
     }
 }

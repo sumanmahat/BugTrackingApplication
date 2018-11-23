@@ -64,13 +64,21 @@ namespace BugTracking_Aplication_suman_mahat
             AddNewBugs addBugs = new AddNewBugs(email);
             addBugs.ShowDialog();
         }
-
+     
         //event on editbugs
         public void EditBugForm(string currentemail, int bugId, string projectname, string classname, string method, string lineNo,string endline, MemoryStream mStream,string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
         {
             EditBug edit = new EditBug(currentemail,bugId,projectname,classname,method,lineNo,endline,mStream,author,year,month,day,sourcecode,status,addedby,solveremail,solveyear,solvemonth,solveday,solvecode);
             edit.ShowDialog();
         }
+
+        //event on view BugDetails
+        public void BugDetailForm(string currentemail, int bugId, string projectname, string classname, string method, string lineNo, string endline, MemoryStream mStream, string author, string year, string month, string day, string sourcecode, string status, string addedby, string solveremail, string solveyear, string solvemonth, string solveday, string solvecode)
+        {
+            ViewBugDetails show = new ViewBugDetails(currentemail, bugId, projectname, classname, method, lineNo, endline, mStream, author, year, month, day, sourcecode, status, addedby, solveremail, solveyear, solvemonth, solveday, solvecode);
+            show.ShowDialog();
+        }
+
 
         //event to view bugs
         private void vToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,6 +123,42 @@ namespace BugTracking_Aplication_suman_mahat
             Login lg = new Login();
             lg.ShowDialog();
             this.Close();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchBug sb = new SearchBug();
+            sb.ShowDialog();
+        }
+
+        private void notificationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Notification not = new Notification();
+            not.ShowDialog();
+        }
+
+        private void versionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+           
+
+
+        }
+
+        private void commmitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String username = "sumanmahat";
+            String password = "Suman6674";
+            String repo = "https://github.com/sumanmahat/BugTrackingApplication.git";
+            string localfile = "C:/Users/Admin/Documents/BugTraking";
+            VersionControl pm = new VersionControl(username, password, repo, localfile);
+            pm.PushCommits();
+        }
+
+        private void gitBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/sumanmahat/BugTrackingApplication";
+            System.Diagnostics.Process.Start(url);
         }
     }
 }

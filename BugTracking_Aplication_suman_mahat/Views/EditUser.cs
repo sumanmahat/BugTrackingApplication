@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace BugTracking_Aplication_suman_mahat.Views
 {
-    public partial class EditUser : Form
+    public partial class EditUser : MaterialSkin.Controls.MaterialForm
     {
         //variables decleared
         private int Id;
-        public EditUser(int Id,string email, string fullname, string contact, string status)
+        public EditUser(int Id, string fullname, string email, string contact, string status)
         {
             InitializeComponent();
             this.Id = Id;
@@ -67,6 +67,16 @@ namespace BugTracking_Aplication_suman_mahat.Views
             {
                 MessageBox.Show("Fill the fields");
             }
+        }
+
+        private void txt_fullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
