@@ -147,18 +147,25 @@ namespace BugTracking_Aplication_suman_mahat
 
         private void commmitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            String message = "hello hello"; //eha message lekni
             String username = "sumanmahat";
             String password = "Suman6674";
             String repo = "https://github.com/sumanmahat/BugTrackingApplication.git";
             string localfile = "C:/Users/Admin/Documents/BugTraking";
             VersionControl pm = new VersionControl(username, password, repo, localfile);
-            pm.PushCommits();
+            pm.PushCommits(message);
         }
 
         private void gitBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string url = "https://github.com/sumanmahat/BugTrackingApplication";
             System.Diagnostics.Process.Start(url);
+        }
+
+        private void version1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VersionControl1 v1 = new VersionControl1();
+            v1.ShowDialog();
         }
     }
 }

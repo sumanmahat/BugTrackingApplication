@@ -44,13 +44,13 @@ namespace BugTracking_Aplication_suman_mahat.Views
         /// <summary>
         /// commit to diractory 
         /// </summary>
-        public void PushCommits()
+        public void PushCommits(String message)
         {
             try {
                 using (var repo = new Repository(localfolder))
                 {
                     // Write content to file system
-                    var content = "Commit this!";
+                    var content = message;
                     File.WriteAllText(Path.Combine(repo.Info.WorkingDirectory, "fileToCommit.txt"), content);
 
                     // Stage the file

@@ -37,13 +37,14 @@
             this.vToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAllBugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gitBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.commmitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.gitBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.commmitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.version1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,7 +58,8 @@
             this.bugsToolStripMenuItem,
             this.versionToolStripMenuItem,
             this.aboutToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.logoutToolStripMenuItem,
+            this.version1ToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -121,6 +123,20 @@
             this.versionToolStripMenuItem.Text = "Version Control";
             this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
             // 
+            // gitBrowserToolStripMenuItem
+            // 
+            this.gitBrowserToolStripMenuItem.Name = "gitBrowserToolStripMenuItem";
+            this.gitBrowserToolStripMenuItem.Size = new System.Drawing.Size(191, 28);
+            this.gitBrowserToolStripMenuItem.Text = "GitBrowser";
+            this.gitBrowserToolStripMenuItem.Click += new System.EventHandler(this.gitBrowserToolStripMenuItem_Click);
+            // 
+            // commmitToolStripMenuItem
+            // 
+            this.commmitToolStripMenuItem.Name = "commmitToolStripMenuItem";
+            this.commmitToolStripMenuItem.Size = new System.Drawing.Size(191, 28);
+            this.commmitToolStripMenuItem.Text = "Commmit";
+            this.commmitToolStripMenuItem.Click += new System.EventHandler(this.commmitToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -164,19 +180,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "BugTrackingApplication";
             // 
-            // gitBrowserToolStripMenuItem
+            // version1ToolStripMenuItem
             // 
-            this.gitBrowserToolStripMenuItem.Name = "gitBrowserToolStripMenuItem";
-            this.gitBrowserToolStripMenuItem.Size = new System.Drawing.Size(191, 28);
-            this.gitBrowserToolStripMenuItem.Text = "GitBrowser";
-            this.gitBrowserToolStripMenuItem.Click += new System.EventHandler(this.gitBrowserToolStripMenuItem_Click);
-            // 
-            // commmitToolStripMenuItem
-            // 
-            this.commmitToolStripMenuItem.Name = "commmitToolStripMenuItem";
-            this.commmitToolStripMenuItem.Size = new System.Drawing.Size(191, 28);
-            this.commmitToolStripMenuItem.Text = "Commmit";
-            this.commmitToolStripMenuItem.Click += new System.EventHandler(this.commmitToolStripMenuItem_Click);
+            this.version1ToolStripMenuItem.Name = "version1ToolStripMenuItem";
+            this.version1ToolStripMenuItem.Size = new System.Drawing.Size(110, 28);
+            this.version1ToolStripMenuItem.Text = "version1";
+            this.version1ToolStripMenuItem.Click += new System.EventHandler(this.version1ToolStripMenuItem_Click);
             // 
             // BugTracking
             // 
@@ -220,5 +229,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem gitBrowserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem commmitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem version1ToolStripMenuItem;
     }
 }

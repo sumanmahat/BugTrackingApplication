@@ -155,8 +155,8 @@ namespace BugTracking_Aplication_suman_mahat.Views
 
         private void viewGitBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string url = "https://github.com/sumanmahat/BugTrackingApplication";
-            System.Diagnostics.Process.Start(url);
+            VersionControl1 v1 = new VersionControl1();
+            v1.ShowDialog();
         }
 
         private void versionControlToolStripMenuItem_Click(object sender, EventArgs e)
