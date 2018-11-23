@@ -390,6 +390,7 @@
             this.txt_sourceCode.Size = new System.Drawing.Size(369, 163);
             this.txt_sourceCode.TabIndex = 40;
             this.txt_sourceCode.Text = "";
+            this.txt_sourceCode.TextChanged += new System.EventHandler(this.txt_sourceCode_TextChanged_1);
             // 
             // openFileDialog1
             // 

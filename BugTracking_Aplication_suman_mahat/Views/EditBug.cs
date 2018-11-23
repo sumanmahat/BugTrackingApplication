@@ -22,7 +22,7 @@ namespace BugTracking_Aplication_suman_mahat.Views
             this.bugId = bugId;
             if (status == "Fixed")
             {
-                txt_solutionCode.ReadOnly = true;
+               
                 txt_project.ReadOnly = true;
                 txt_class.ReadOnly = true;
                 txt_method.ReadOnly = true;
@@ -200,7 +200,9 @@ namespace BugTracking_Aplication_suman_mahat.Views
             txt_sourceCode.SelectionLength = originalLength;
             txt_sourceCode.SelectionColor = originalColor;
 
-            
+            txt_project.Focus();
+
+
         }
 
         private void txt_solutionCode_TextChanged_1(object sender, EventArgs e)
